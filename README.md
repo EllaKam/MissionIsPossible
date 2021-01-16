@@ -9,11 +9,13 @@ both realise same algorithm in different way.
 
 Environment: 
  - SQL server with installed SQL file "AlignDB.sql"
+ - Create directory "c:\Temp\" or change mdf and log path files in "AlignDB.sql"
  - .NET5.0 framework
+ - Change connection string in the file appsettings.json
 
 Find closest mission doesn't return real data - all known Geolocation APIs need a licence. 
-A distance is calculated by Lat/Long using GeoCoordinate.NetStandard1 library.
-Lat/Long getting is simulated by MOK.
+A distance is calculated by Latitude/Longitude using GeoCoordinate.NetStandard1 library.
+Lat/Long getting is simulated by MOCK.
 
 ToDo list:
  - Log generation
