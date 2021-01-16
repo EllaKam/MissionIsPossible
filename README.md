@@ -13,6 +13,8 @@ Environment:
  - .NET5.0 framework
  - Change connection string in the file appsettings.json
 
+Data structure see in the file DBDiagram.PNG
+
 Find closest mission doesn't return real data - all known Geolocation APIs need a licence. 
 A distance is calculated by Latitude/Longitude using GeoCoordinate.NetStandard1 library.
 Lat/Long getting is simulated by MOCK.
