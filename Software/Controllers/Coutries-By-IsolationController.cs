@@ -27,7 +27,7 @@ namespace MissionPossible.Controllers
             try
             {
                var countryByIsolation = await _missionService.GetCountryByIsolation();
-               return $"{countryByIsolation.Country} {countryByIsolation.AgentsCount}";
+               return $"{countryByIsolation?.Country} {countryByIsolation?.AgentsCount}";
             }
             catch (Exception)
             {

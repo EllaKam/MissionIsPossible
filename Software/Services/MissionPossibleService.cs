@@ -41,7 +41,11 @@ namespace MissionPossible.Services
         public async Task<Mission> GetClosestMission(Position position)
         { 
             var missions= await Task.Run( () => _dbService.GetAllMissions());
-            var closed = await Task.Run(()=>
+            if (missions.ToList().Count == 0)
+            {
+                return null;
+            }
+            var closed = await Task.Run(()=> 
                 missions.Aggregate((i1, i2) => ComparePosition(position, i1, i2)));
             return closed.Mission;
         }
